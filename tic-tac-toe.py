@@ -8,7 +8,21 @@ discord: idk
 """
 
 def main():
+    oddelovac = "=" * 40
+    
+    # 1. ÚVOD A PRAVIDLA
     print("Vítejte ve hře Tic Tac Toe")
+    print(oddelovac)
+    print("PRAVIDLA HRY:")
+    print("Každý hráč může umístit jeden symbol (nebo kámen)")
+    print("na hrací pole 3x3. VYHRÁVÁ ten, kdo umístí")
+    print("tři své symboly do:")
+    print("* horizontální,")
+    print("* vertikální nebo")
+    print("* diagonální řady.")
+    print(oddelovac)
+    print("Pojďme začít hrát!")
+    
     herni_plocha = [' ' for _ in range(9)]
     aktualni_hrac = 'X'
     hra_bezi = True
