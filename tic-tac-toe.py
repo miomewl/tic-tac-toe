@@ -22,16 +22,22 @@ def main():
     print("* diagonální řady.")
     print(oddelovac)
     print("Pojďme začít hrát!")
-    
+
     herni_plocha = [' ' for _ in range(9)]
     aktualni_hrac = 'X'
     hra_bezi = True
 
     while hra_bezi:
-        print(f"\nNa tahu je: {aktualni_hrac}")
-        print(f"{herni_plocha[0]} | {herni_plocha[1]} | {herni_plocha[2]}")
-        print(f"{herni_plocha[3]} | {herni_plocha[4]} | {herni_plocha[5]}")
-        print(f"{herni_plocha[6]} | {herni_plocha[7]} | {herni_plocha[8]}")
+        print(f"\nNa tahu je: {aktualni_hrac}")    
+        print("-" * 40)
+        print("+---+---+---+")
+        print(f"| {herni_plocha[0]} | {herni_plocha[1]} | {herni_plocha[2]} |")
+        print("+---+---+---+")
+        print(f"| {herni_plocha[3]} | {herni_plocha[4]} | {herni_plocha[5]} |")
+        print("+---+---+---+")
+        print(f"| {herni_plocha[6]} | {herni_plocha[7]} | {herni_plocha[8]} |")
+        print("+---+---+---+")
+        print(oddelovac)
 
         vstup = input("Zadej pozici (1-9): ")
 
