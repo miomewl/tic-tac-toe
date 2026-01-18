@@ -10,7 +10,7 @@ discord: idk
 def main():
     print("Vítejte ve hře Tic Tac Toe")
     herni_plocha = [' ' for _ in range(9)]
-    aktualni_hrac = 'X' # Nová proměnná
+    aktualni_hrac = 'X'
     hra_bezi = True
 
     while hra_bezi:
@@ -37,11 +37,30 @@ def main():
             
         herni_plocha[index] = aktualni_hrac
         
-        # Přepnutí hráče
-        if aktualni_hrac == 'X':
-            aktualni_hrac = 'O'
+        # KONTROLA VÝHRY
+        vyherni_kombinace = [
+            [0, 1, 2], [3, 4, 5], [6, 7, 8],
+            [0, 3, 6], [1, 4, 7], [2, 5, 8],
+            [0, 4, 8], [2, 4, 6]
+        ]
+        
+        vitezi = False
+        for a, b, c in vyherni_kombinace:
+            if herni_plocha[a] == aktualni_hrac and herni_plocha[b] == aktualni_hrac and herni_plocha[c] == aktualni_hrac:
+                vitezi = True
+                break
+        
+        if vitezi:
+            print(f"Hráč {aktualni_hrac} vyhrál!")
+            hra_bezi = False
+        elif ' ' not in herni_plocha:
+            print("Remíza!")
+            hra_bezi = False
         else:
-            aktualni_hrac = 'X'
+            if aktualni_hrac == 'X':
+                aktualni_hrac = 'O'
+            else:
+                aktualni_hrac = 'X'
 
 if __name__ == "__main__":
     main()
