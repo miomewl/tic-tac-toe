@@ -24,6 +24,7 @@ K hraní potřebujete mít nainstalovaný **Python 3**.
 ## 🎮 Ovládání
 Hráči zadávají pozice pomocí čísel **1 až 9**. Rozložení odpovídá numerické klávesnici:
 
+```
 +---+---+---+
 | 1 | 2 | 3 |
 +---+---+---+
@@ -31,6 +32,8 @@ Hráči zadávají pozice pomocí čísel **1 až 9**. Rozložení odpovídá nu
 +---+---+---+
 | 7 | 8 | 9 |
 +---+---+---+
+```
+
 Program automaticky kontroluje:
 - Jestli zadáváte číslo.
 - Jestli je číslo v rozsahu 1-9.
@@ -38,4 +41,3 @@ Program automaticky kontroluje:
 
 ## 👤 Autor
 **Valeriia Miller**  
-```
