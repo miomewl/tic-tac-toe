@@ -10,10 +10,11 @@ discord: idk
 def main():
     print("Vítejte ve hře Tic Tac Toe")
     herni_plocha = [' ' for _ in range(9)]
+    aktualni_hrac = 'X' # Nová proměnná
     hra_bezi = True
 
     while hra_bezi:
-        # Výpis plochy
+        print(f"\nNa tahu je: {aktualni_hrac}")
         print(f"{herni_plocha[0]} | {herni_plocha[1]} | {herni_plocha[2]}")
         print(f"{herni_plocha[3]} | {herni_plocha[4]} | {herni_plocha[5]}")
         print(f"{herni_plocha[6]} | {herni_plocha[7]} | {herni_plocha[8]}")
@@ -34,10 +35,13 @@ def main():
             print("Obsazeno.")
             continue
             
-        herni_plocha[index] = 'X'
+        herni_plocha[index] = aktualni_hrac
         
-        # Provizorní ukončení po jednom tahu pro test
-        # hra_bezi = False 
+        # Přepnutí hráče
+        if aktualni_hrac == 'X':
+            aktualni_hrac = 'O'
+        else:
+            aktualni_hrac = 'X'
 
 if __name__ == "__main__":
     main()
